@@ -1,3 +1,4 @@
+<!--Widgets_1：主页歌曲组件：歌曲封面image，歌曲作者author，歌曲名称title---->
 <script setup>
 import { toRefs } from 'vue';
 import { RouterLink } from 'vue-router';

@@ -1,0 +1,12 @@
+{
+    "name": "zhengfu200's favorite",
+    "albumCover": "/album_image/zhengfu200.png",
+    "releaseYear": "2024",
+    "tracks": [
+        {
+            "id": 1,
+            "name": "See You Again",
+            "path": "/music/See You Again.mp3"
+        }
+    ]
+}
