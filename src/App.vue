@@ -1,15 +1,25 @@
 <script setup>
-import { ref } from 'vue';
+import { ref,onMounted } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
 
 //components
 import MenuItem from './components/MenuItem.vue';
+import Widgets_4 from './components/Widgets_4.vue';
 
 //icons:
 import ChevronUp from 'vue-material-design-icons/ChevronUp.vue';
 import ChevronDown from 'vue-material-design-icons/ChevronDown.vue';
 import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue';
 import ChevronRight from 'vue-material-design-icons/ChevronRight.vue';
+
+import { useSongStore } from '@/stores/song';
+import { storeToRefs } from 'pinia';
+const useSong = useSongStore()
+const { isPlaying, audio, currentTrack } = storeToRefs(useSong)
+
+onMounted(()=>{
+  isPlaying.value = false 
+})
 
 let openMenu = ref(false)
 </script>
@@ -109,4 +119,6 @@ let openMenu = ref(false)
     <RouterView/>
     <div class="mb-[100px]"></div>
   </div>
+
+  <Widgets_4 v-if="currentTrack"
 </template>
