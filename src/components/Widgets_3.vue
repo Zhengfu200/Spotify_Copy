@@ -5,6 +5,12 @@ import Play from 'vue-material-design-icons/Play.vue'
 import Pause from 'vue-material-design-icons/Pause.vue'
 import Heart from 'vue-material-design-icons/Heart.vue'
 
+//引入pinia
+import { useSongStore } from '../stores/song';
+import { storeToRefs } from 'pinia';
+const useSong = useSongStore()
+const { isPlaying, currentTrack } = storeToRefs(useSong)
+
 let isHover = ref(false)
 let isTrackTime = ref(null)
 
@@ -22,7 +28,7 @@ onMounted(() =>{
         const duration = music_src.duration;
         const min = Math.floor(duration / 60)
         const sec = Math.floor(duration % 60)
-        isTrackTime.value = min+':'+sec.toString()
+        isTrackTime.value = min+':'+sec.toString().padStart(2,'0')
     })
 })
 
@@ -40,18 +46,33 @@ onMounted(() =>{
 
         <div class="flex items-center w-full py-1.5">
             <div v-if="isHover" class="w-[40px] ml-[14px] mr-[6px] cursor-pointer">
-                <Play v-if="true" fillColor="#FFFFFF" :size="25"/>
-                <Pause v-else fillColor="#FFFFFF" :size="25"/>
+                <Play 
+                    v-if="!isPlaying" 
+                    fillColor="#FFFFFF" 
+                    :size="25" 
+                    @click="useSong.PlayOrPauseThisSong(artist,track)"
+                />
+
+                <Play 
+                    v-else-if="isPlaying && currentTrack.name !== track.name" 
+                    fillColor="#FFFFFF" 
+                    :size="25" 
+                    @click="useSong.loadSong(artist,track)"
+                />
+
+                <Pause v-else fillColor="#FFFFFF" :size="25" @click="useSong.PlayOrPauseSong()"/>
             </div>
 
             <div v-else class="text-white font-semibold w-[40px] ml-5">
-                <span>
+                <span :class="{'text-green-500': currentTrack && currentTrack.name === track.name}">
                     {{ index }}
                 </span>
             </div>
 
             <div>
-                <div class="text-white font-semibold">
+                <div
+                    :class="{'text-green-500': currentTrack && currentTrack.name === track.name}" 
+                    class="text-white font-semibold">
                     {{ track.name }}
                 </div>
                 <div class="text-sm font-semibold text-gray-400">{{ artist.name }}</div>
@@ -64,7 +85,7 @@ onMounted(() =>{
             </button>
 
             <div v-if="isTrackTime" class="text-xs mx-5 text-gray-400">
-                {{  isTrackTime}}
+                {{  isTrackTime }}
             </div>
         </div>
     </li>

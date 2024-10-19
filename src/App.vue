@@ -15,7 +15,7 @@ import ChevronRight from 'vue-material-design-icons/ChevronRight.vue';
 import { useSongStore } from '@/stores/song';
 import { storeToRefs } from 'pinia';
 const useSong = useSongStore()
-const { isPlaying, audio, currentTrack } = storeToRefs(useSong)
+const { isPlaying, currentTrack } = storeToRefs(useSong)
 
 onMounted(()=>{
   isPlaying.value = false 
@@ -120,5 +120,5 @@ let openMenu = ref(false)
     <div class="mb-[100px]"></div>
   </div>
 
-  <Widgets_4 v-if="currentTrack"
+  <Widgets_4 v-if="currentTrack"/>
 </template>

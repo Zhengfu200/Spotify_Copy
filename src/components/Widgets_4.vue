@@ -1,16 +1,18 @@
 <!--Widgets_4:核心播放器功能-->
 <script setup>
 import { ref, watch, onMounted } from 'vue';
+
+import artist from '../artist.json'
 //图标
 import Play from 'vue-material-design-icons/Play.vue'
 import Pause from 'vue-material-design-icons/Pause.vue'
 import Heart from 'vue-material-design-icons/Heart.vue'
-import PictureInPictureBottomRight from 'vue-material-design-icons/PictureInPictureBottomRight'
 import SkipBackward from 'vue-material-design-icons/SkipBackward.vue'
 import SkipForward from 'vue-material-design-icons/SkipForward.vue'
+import PictureInPictureBottomRight from 'vue-material-design-icons/PictureInPictureBottomRight.vue'
 
 //Pinia
-import { useSongStore } from '@/stores/song';
+import { useSongStore } from '../stores/song';
 import { storeToRefs } from 'pinia';
 const useSong = useSongStore()
 const { isPlaying, audio, currentTrack, currentArtist } = storeToRefs(useSong)
@@ -48,7 +50,6 @@ onMounted(() => {
         })
 
         //实现点击跳转进度功能
-        //本部分过于复杂，参考教程：https://youtu.be/ZzuqwqP1wAQ?si=N1cZyuAkHu0fNGX7
         seekerContainer.value.addEventListener('click', function (e) {
             const clickPosition = (e.pageX - seekerContainer.value.offsetLeft) / seekerContainer.value.offsetWidth
             const time = audio.value.duration * clickPosition;
@@ -94,8 +95,26 @@ watch(() => isTrackTimeCurrent.value, (time) => {
 
 
 <template>
-    <div>
-
+    <div
+        id="MusicPlayer"
+        class="
+            fixed
+            flex
+            items-center
+            justify-between
+            bottom-0
+            w-full
+            z-50
+            h-[90px]
+            bg-[#181818]
+            border-t
+            border-t-[#272727]">
+            
+            <div class="flex items-center w-1/4">
+                <div class="flex item-center ml-4">
+                    <img class="rounded-sm shadow-2xl" width="55" :src="artist.albumCover">
+                </div>
+            </div>
     </div>
 </template>
 

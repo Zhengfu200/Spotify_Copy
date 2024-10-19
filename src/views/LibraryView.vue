@@ -7,6 +7,21 @@ import DotsHorizontal from 'vue-material-design-icons/DotsHorizontal.vue'
 import Heart from 'vue-material-design-icons/Heart.vue'
 import ClockTimeThreeOutline from 'vue-material-design-icons/ClockTimeThreeOutline.vue'
 import artist from '../artist.json'
+
+//pinia
+import { useSongStore } from '../stores/song';
+import { storeToRefs } from 'pinia';
+const useSong = useSongStore()
+const { isPlaying, currentTrack, currentArtist } = storeToRefs(useSong)
+
+const Music_Funtion = () =>{
+    if(currentTrack.value){
+        useSong.PlayOrPauseThisSong(currentArtist.value , currentTrack.value)
+        return
+    }
+    useSong.playFromFirst()
+}
+
 </script>
 
 <template>
@@ -62,8 +77,8 @@ import artist from '../artist.json'
                                     items-center
                                     bottom-0
                                     mb-1.5">
-                                <button type="button" class="p-1 rounded-full bg-white">
-                                    <Play v-if="true" fillColor="#181818" :size="25"/>
+                                <button type="button" class="p-1 rounded-full bg-white" @click="Music_Funtion()">
+                                    <Play v-if="!isPlaying" fillColor="#181818" :size="25"/>
                                     <Play v-else fillColor="#181818" :size="25"/>
                                 </button>
                                 <button type="button">
