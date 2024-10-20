@@ -6,17 +6,20 @@
         {
             "id": 1,
             "name": "See You Again",
-            "path": "/music/See You Again.mp3"
+            "path": "/music/See You Again.mp3",
+            "album": "/album_image/See You Again.png"
         },
         {
             "id": 2,
             "name": "See You Again 2",
-            "path": "/music/See You Again.mp3"
+            "path": "/music/See You Again.mp3",
+            "album": "/album_image/See You Again.png"
         },
         {
             "id": 3,
             "name": "See You Again 3",
-            "path": "/music/See You Again.mp3"
+            "path": "/music/See You Again.mp3",
+            "album": "/album_image/See You Again.png"
         }
     ]
 }

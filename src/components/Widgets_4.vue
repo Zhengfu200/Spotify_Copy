@@ -15,7 +15,7 @@ import PictureInPictureBottomRight from 'vue-material-design-icons/PictureInPict
 import { useSongStore } from '../stores/song';
 import { storeToRefs } from 'pinia';
 const useSong = useSongStore()
-const { isPlaying, audio, currentTrack, currentArtist } = storeToRefs(useSong)
+const { isPlaying, audio, currentTrack, currentAritst } = storeToRefs(useSong)
 
 let isHover = ref(false)
 let isTrackTimeCurrent = ref(false)
@@ -90,7 +90,6 @@ watch(() => isTrackTimeCurrent.value, (time) => {
     }
 })
 
-
 </script>
 
 
@@ -113,6 +112,14 @@ watch(() => isTrackTimeCurrent.value, (time) => {
             <div class="flex items-center w-1/4">
                 <div class="flex item-center ml-4">
                     <img class="rounded-sm shadow-2xl" width="55" :src="artist.albumCover">
+                    <div class="ml-4">
+                        <div class="text-[14px] text-white hover:underline cursor-pointer">
+                            {{ currentTrack.name }}
+                        </div>
+                        <div class="text-[11px] text-gray-400 hover:underline hover:text-white cursor-pointer">
+                            {{ currentTrack.name }}
+                        </div>
+                    </div>
                 </div>
             </div>
     </div>

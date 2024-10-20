@@ -2,9 +2,12 @@
 import { ref,onMounted } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
 
+import MenuItem_2 from './components/MenuItem_2.vue';
 //components
 import MenuItem from './components/MenuItem.vue';
 import Widgets_4 from './components/Widgets_4.vue';
+
+import artist from './artist.json'
 
 //icons:
 import ChevronUp from 'vue-material-design-icons/ChevronUp.vue';
@@ -93,12 +96,8 @@ let openMenu = ref(false)
           :icon-size="26" name="收藏" iconString="liked" pageUrl="/liked"/>
       </ul>
       <div class="border-b border-b-gray-700"></div>
-      <ul>
-        <li class = "font-semibold text-[13px] mt-3 text-gray-50 hover:text-white">创建的歌单 #1</li>
-        <li class = "font-semibold text-[13px] mt-3 text-gray-50 hover:text-white">创建的歌单 #2</li>
-        <li class = "font-semibold text-[13px] mt-3 text-gray-50 hover:text-white">创建的歌单 #3</li>
-        <li class = "font-semibold text-[13px] mt-3 text-gray-50 hover:text-white">创建的歌单 #4</li>
-        <li class = "font-semibold text-[13px] mt-3 text-gray-50 hover:text-white">创建的歌单 #5</li>
+      <ul v-for="track in artist.tracks" :key="track">
+        <MenuItem_2 :track="track"/>
       </ul>
     </div>
   </div>
@@ -119,6 +118,5 @@ let openMenu = ref(false)
     <RouterView/>
     <div class="mb-[100px]"></div>
   </div>
-
   <Widgets_4 v-if="currentTrack"/>
 </template>
