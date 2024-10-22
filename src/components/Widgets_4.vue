@@ -15,7 +15,7 @@ import PictureInPictureBottomRight from 'vue-material-design-icons/PictureInPict
 import { useSongStore } from '../stores/song';
 import { storeToRefs } from 'pinia';
 const useSong = useSongStore()
-const { isPlaying, audio, currentTrack, currentAritst } = storeToRefs(useSong)
+const { isPlaying, audio, currentTrack, currentAritst } = storeToRefs(useSong) 
 
 let isHover = ref(false)
 let isTrackTimeCurrent = ref(false)
@@ -145,7 +145,7 @@ watch(() => isTrackTimeCurrent.value, (time) => {
                 </div> 
 
                 <div class="flex items-center h-[25px]">
-                    <div v-if="isTrackTimeCurrent" class="text-white text-[12px] pr-2 pt-[11px]">{{ isTrackTimeCurrent }}<div/>
+                    <div v-if="isTrackTimeCurrent" class="text-white text-[12px] pr-2 pt-[11px]">{{ isTrackTimeCurrent }}</div>
                     <div
                         ref="seekerContainer"
                         class="w-full relative mt-2 mb-3"
@@ -164,20 +164,20 @@ watch(() => isTrackTimeCurrent.value, (time) => {
                                     bg-opacity-100
                                     focus:outline-none
                                     accent-white"
-                                    
                                     :class="{'rangeDotHidden' :!isHover}"
                         >
                         <div
                             class="point-events-none mt-[6px] absolute h-[4px] z-10 inset-y-0 left-0 w-0"
                             :style="`width:${range}%;`"
-                            :class="isHover ? 'bg-green-500' :'bg-white'"/>
+                            :class="isHover ? 'bg-green-500' :'bg-white'">
+                        </div>
                     </div>
                 </div>
             </div>
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style>
 .rangeDotHidden[type="range"]::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
