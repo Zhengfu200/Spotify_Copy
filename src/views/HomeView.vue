@@ -10,11 +10,11 @@ import Widgets_12 from '@/components/Widgets_1(2).vue';
         </button>
         <div class="py-1.5"></div>
         <div class="flex items-center">
-            <Widgets_12 singer_album="../public/album_image/zhengfu200.png" singer_name="zhengfu200" />
-            <Widgets_12 singer_album="../public/album_image/zhengfu200.png" singer_name="zhengfu200" />
-            <Widgets_12 singer_album="../public/album_image/zhengfu200.png" singer_name="zhengfu200" />
-            <Widgets_12 singer_album="../public/album_image/zhengfu200.png" singer_name="zhengfu200" />
-            <Widgets_12 singer_album="../public/album_image/zhengfu200.png" singer_name="zhengfu200" />
+            <Widgets_12 singer_album="../album_image/zhengfu200.png" singer_name="zhengfu200" />
+            <Widgets_12 singer_album="../album_image/zhengfu200.png" singer_name="zhengfu200" />
+            <Widgets_12 singer_album="../album_image/zhengfu200.png" singer_name="zhengfu200" />
+            <Widgets_12 singer_album="../album_image/zhengfu200.png" singer_name="zhengfu200" />
+            <Widgets_12 singer_album="../album_image/zhengfu200.png" singer_name="zhengfu200" />
         </div>
     </div>
 
