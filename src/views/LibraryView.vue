@@ -16,7 +16,7 @@ const { isPlaying, currentTrack, currentArtist } = storeToRefs(useSong)
 
 const Music_Funtion = () =>{
     if(currentTrack.value){
-        useSong.PlayOrPauseThisSong(currentArtist.value , currentTrack.value)
+        useSong.PlayOrPauseThisSong(currentArtist.value, currentTrack.value)
         return
     }
     useSong.playFromFirst()
@@ -79,8 +79,9 @@ const Music_Funtion = () =>{
                                     mb-1.5">
                                 <button type="button" class="p-1 rounded-full bg-white" @click="Music_Funtion()">
                                     <Play v-if="!isPlaying" fillColor="#181818" :size="25"/>
-                                    <Play v-else fillColor="#181818" :size="25"/>
+                                    <Pause v-else fillColor="#181818" :size="25"/>
                                 </button>
+                                <div><——This one has BUG , IDK why……</div>
                                 <button type="button">
                                     <Heart fillColor="#1BD760" :size="28"/>
                                 </button>

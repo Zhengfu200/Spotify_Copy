@@ -69,6 +69,7 @@ export const useSongStore = defineStore('song', {
      },
 
      resetState(){
+      //this.audio.pause()
       this.isPlaying = false
       this.audio = null
       this.currentAritst = null

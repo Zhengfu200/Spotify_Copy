@@ -159,22 +159,22 @@ watch(() => isTrackTimeCurrent.value, (time) => {
                                     bg-opacity-100
                                     focus:outline-none
                                     accent-white"
-                                    :class="{ 'rangeDotHidden': !isHover }">
+                                    :class="{ 'DotHidden': !isHover }">
                     <div class="point-events-none mt-[6px] absolute h-[4px] z-10 inset-y-0 left-0 w-0"
                         :style="`width:${range}%;`" :class="isHover ? 'bg-green-500' : 'bg-white'" />
                     
                     <div class="absolute h-[4px] z-[-0] mt-[6px] inset-y-0 left-0 w-full bg-gray-500 rounded-full"/>
                 </div>
 
-                <div v-if="isTrackTimeTotal" class="text-white text-[12px] pr-2 pt-[11px]">{{ isTrackTimeTotal }}</div>
+                <div v-if="isTrackTimeTotal" class="text-white text-[12px] pr-2 pt-[11px] ml-1">{{ isTrackTimeTotal }}</div>
             </div>
         </div>
     </div>
 </template>
 
-<!--进度条只有检测鼠标进入时才显示-->
+<!--进度条点只有检测鼠标进入时才显示-->
 <style>
-.rangeDotHidden[type="range"]::-webkit-slider-thumb {
+.DotHidden[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 0;

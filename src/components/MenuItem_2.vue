@@ -21,7 +21,7 @@ const { track, artist } = toRefs(props)
 <template>
     <li>
         <RouterLink to="/library">
-            <div class="flex items-center w-full py-1.5">
+            <div class="flex items-center w-full py-1.5 ">
                 <div v-if="isHover" class="font-semibold text-[13px] mt-3 text-gray-50 hover:text-white">
                     <Play v-if="!isPlaying" fillColor="#FFFFFF" :size="25"
                         @click="useSong.PlayOrPauseThisSong(artist, track)" />

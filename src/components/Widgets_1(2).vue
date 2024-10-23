@@ -1,14 +1,13 @@
-<!--Widgets_1：主页歌曲组件：歌曲封面image，歌曲作者author，歌曲名称title---->
+<!--Widgets_1：主页歌手组件：歌手头像singer_album,歌手名称singer_name---->
 <script setup>
 import { toRefs } from 'vue';
 import { RouterLink } from 'vue-router';
 
 const props = defineProps({
-    image: String,
-    title: String,
-    author: String
+    singer_album: String,
+    singer_name: String
 })
-const {image,title,author} = toRefs(props)
+const {singer_album,singer_name} = toRefs(props)
 </script>
 
 <template>
@@ -23,9 +22,8 @@ const {image,title,author} = toRefs(props)
                 hover:bg-[#252525]
                 cursor-pointer
             ">
-            <img class="rounded-md" :src="image">
-            <div class="text-white pt-4 font-semibold text-[17px]">{{ title }}</div>
-            <div class="text-gray-400 pt-1 pb-3 text-[14px] ">{{ author }}</div>
+            <img class="rounded-full" :src="singer_album">
+            <div class="text-white pt-4 font-semibold text-[17px] items-center justify-center flex">{{ singer_name }}</div>
         </div>
     </RouterLink>
 </template>
