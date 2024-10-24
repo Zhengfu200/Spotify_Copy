@@ -2,6 +2,7 @@
 <script setup>
 import { ref, watch, onMounted } from 'vue';
 
+import Widgets_42 from './Widgets_4(2).vue';
 import artist from '../artist.json'
 //图标
 import Play from 'vue-material-design-icons/Play.vue'
@@ -168,6 +169,10 @@ watch(() => isTrackTimeCurrent.value, (time) => {
 
                 <div v-if="isTrackTimeTotal" class="text-white text-[12px] pr-2 pt-[11px] ml-1">{{ isTrackTimeTotal }}</div>
             </div>
+        </div>
+
+        <div class="flex items-center w-1/4 justify-end pr-10">
+            <Widgets_42/>
         </div>
     </div>
 </template>
