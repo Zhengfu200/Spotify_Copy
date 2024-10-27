@@ -12,10 +12,10 @@
         },
         {
             "id": 2,
-            "name": "See You Again 2",
-            "path": "/music/See You Again.mp3",
-            "album": "/album_image/See You Again.png",
-            "singer":"Wiz Khalifa,Charlie Puth"
+            "name": "Shape of You",
+            "path": "/music/Shape Of You.mp3",
+            "album": "https://i.scdn.co/image/ab67616d00004851ba5db46f4b838ef6027e6f96",
+            "singer":"Ed Sheeran"
         },
         {
             "id": 3,

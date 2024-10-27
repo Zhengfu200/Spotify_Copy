@@ -14,7 +14,7 @@ import { storeToRefs } from 'pinia';
 const useSong = useSongStore()
 const { isPlaying, currentTrack, currentArtist } = storeToRefs(useSong)
 
-const Music_Funtion = () =>{
+const Music_Function = () => {
     if(currentTrack.value){
         useSong.PlayOrPauseThisSong(currentArtist.value, currentTrack.value)
         return
@@ -77,7 +77,7 @@ const Music_Funtion = () =>{
                                     items-center
                                     bottom-0
                                     mb-1.5">
-                                <button type="button" class="p-1 rounded-full bg-white" @click="Music_Funtion()">
+                                <button class="p-1 rounded-full bg-white" @click="Music_Function()">
                                     <Play v-if="!isPlaying" fillColor="#181818" :size="25"/>
                                     <Pause v-else fillColor="#181818" :size="25"/>
                                 </button>
