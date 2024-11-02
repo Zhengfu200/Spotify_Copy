@@ -1,5 +1,6 @@
 <script setup>
 import { ref,onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 import { RouterLink, RouterView } from 'vue-router';
 
 import MenuItem_2 from './components/MenuItem_2.vue';
@@ -20,9 +21,24 @@ import { storeToRefs } from 'pinia';
 const useSong = useSongStore()
 const { isPlaying, currentTrack } = storeToRefs(useSong)
 
+const router = useRouter();
+
 onMounted(()=>{
   isPlaying.value = false 
 })
+//前进后退页面
+function go_to_last_page(){
+  router.go(-1)
+}
+
+function go_to_next_page(){
+  router.go(1)
+}
+//跳转个人主页
+function profile(){
+  const link = ref('https://github.com/Zhengfu200')
+  window.open(link.value, '_blank')
+}
 
 let openMenu = ref(false)
 </script>
@@ -41,10 +57,10 @@ let openMenu = ref(false)
        justify-between">
       <div class="flex items-center ml-6">
         <button type="button" class="rounded-full bg-black p-[1px] cursor-pointer">
-          <ChevronLeft fill-color="#FFFFFF" :size="30" />
+          <ChevronLeft fill-color="#FFFFFF" :size="30" @click="go_to_last_page"/>
         </button>
         <button type="button" class="rounded-full bg-black p-[1px] ml-4 cursor-pointer">
-          <ChevronRight fill-color="#FFFFFF" :size="30" />
+          <ChevronRight fill-color="#FFFFFF" :size="30" @click="go_to_next_page"/>
         </button>
       </div>
 
@@ -65,8 +81,9 @@ let openMenu = ref(false)
         class="fixed w-[190px] bg-[#282828] shadow-2xl z-50 rounded-sm top-[52px] right-[35px] p-1 cursor-pointer"
       >
         <ul class="text-gray-200 font-semibold text-[14px]">
-          <li class="px-3 py-2.5 hover:bg-[#3E3D3D] border-b border-b-gray-600">个人资料</li>
-          <li class="px-3 py-2.5 hover:bg-[#3E3D3D] border-b border-b-gray-600">登出</li>
+          <li class="px-3 py-2.5 hover:bg-[#3E3D3D] border-b border-b-gray-600">
+            <div @click="profile">个人资料</div>
+          </li>
         </ul>
       </span>
     </div>
@@ -89,11 +106,6 @@ let openMenu = ref(false)
         <RouterLink to="/library">
           <MenuItem class="ml-[1px]" :iconSize="23" iconString="library" pageUrl="/library" name="库"/>
         </RouterLink>
-        <div class="py-3.5"></div>
-        <MenuItem :icon-size="26" name="创建歌单" iconString="playlist" pageUrl="/playlist"/>
-        <MenuItem 
-          class="ml-[1px]"
-          :icon-size="26" name="收藏" iconString="liked" pageUrl="/liked"/>
       </ul>
       <div class="border-b border-b-gray-700"></div>
       <ul v-for="track in artist.tracks" :key="track">

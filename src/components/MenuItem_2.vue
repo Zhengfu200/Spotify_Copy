@@ -20,24 +20,9 @@ const { track, artist } = toRefs(props)
 
 <template>
     <li>
-        <RouterLink to="/library">
-            <div class="flex items-center w-full py-1.5 ">
-                <div v-if="isHover" class="font-semibold text-[13px] mt-3 text-gray-50 hover:text-white">
-                    <Play v-if="!isPlaying" fillColor="#FFFFFF" :size="25"
-                        @click="useSong.PlayOrPauseThisSong(artist, track)" />
-
-                    <Play v-else-if="isPlaying && currentTrack.name !== track.name" fillColor="#FFFFFF" :size="25"
-                        @click="useSong.loadSong(artist, track)" />
-
-                    <Pause v-else fillColor="#FFFFFF" :size="25" @click="useSong.PlayOrPauseSong()" />
-                </div>
-                <div>
-                    <div :class="{ 'text-green-500': currentTrack && currentTrack.name === track.name }"
-                        class="font-semibold text-[13px] mt-3 text-gray-50 hover:text-white">
-                        {{ track.name }}
-                    </div>
-                </div>
-            </div>
-        </RouterLink>
+        <div :class="{ 'text-green-500': currentTrack && currentTrack.name === track.name }"
+            class="font-semibold text-[13px] mt-5 text-gray-50 hover:text-white">
+            {{ track.name }}
+        </div>
     </li>
 </template>

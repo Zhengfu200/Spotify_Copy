@@ -22,8 +22,8 @@ onMounted(() =>{
 </script>
 
 <template>
-    <VolumeMute v-if="default_vol == 0" fill-color="#FFFFFF" :size="20" />
-    <VolumeHigh v-else fill-color="#FFFFFF" :size="20" />
+    <VolumeMute class="mt-[24px]" v-if="default_vol == 0" fill-color="#FFFFFF" :size="20" />
+    <VolumeHigh class="mt-[24px]" v-else fill-color="#FFFFFF" :size="20" />
 
     <div class="flex items-center ml-2 w-[150px] relative mt-2 mb-[23px ]" @mouseenter="isHover = true"
         @mouseleave="isHover = false">

@@ -8,7 +8,12 @@ const props = defineProps({
     singer_name: String,
     singer_url: String
 })
-const { singer_album, singer_name } = toRefs(props)
+const { singer_album, singer_name, singer_url} = toRefs(props)
+
+function open_singer_url() {
+    window.open(singer_url.value, '_blank');  // 跳转到歌手的主页
+ 
+}
 </script>
 
 <template>
