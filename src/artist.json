@@ -19,45 +19,59 @@
         },
         {
             "id": 3,
-            "name": "See You Again 3",
-            "path": "/music/See You Again.mp3",
+            "name": "Blinding Lights",
+            "path": "/music/Blinding Lights - The Weeknd.mp3",
             "album": "/album_image/See You Again.png",
-            "singer":"Wiz Khalifa,Charlie Puth"
+            "singer":"The Weeknd"
         },
         {
             "id": 4,
-            "name": "See You Again 4",
-            "path": "/music/See You Again.mp3",
+            "name": "Closer",
+            "path": "/music/Closer - The Chainsmokers&Halsey.mp3",
             "album": "/album_image/See You Again.png",
-            "singer":"Wiz Khalifa,Charlie Puth"
+            "singer":"The Chainsmokers&Halsey"
         },
         {
             "id": 5,
-            "name": "See You Again 5",
-            "path": "/music/See You Again.mp3",
+            "name": "Counting Stars",
+            "path": "/music/Counting Stars - OneRepublic.mp3",
             "album": "/album_image/See You Again.png",
-            "singer":"Wiz Khalifa,Charlie Puth"
+            "singer":"OneRepublic"
         },
         {
             "id": 6,
-            "name": "See You Again 6",
-            "path": "/music/See You Again.mp3",
+            "name": "Free Loop",
+            "path": "/music/Free Loop - Daniel Powter.mp3",
             "album": "/album_image/See You Again.png",
-            "singer":"Wiz Khalifa,Charlie Puth"
+            "singer":"Daniel Powter"
         },
         {
             "id": 7,
-            "name": "See You Again 7",
-            "path": "/music/See You Again.mp3",
+            "name": "I Ain’t Worried",
+            "path": "/music/I Ain’t Worried-OneRepublic.mp3",
             "album": "/album_image/See You Again.png",
-            "singer":"Wiz Khalifa,Charlie Puth"
+            "singer":"OneRepublic"
         },
         {
             "id": 8,
-            "name": "See You Not Again ",
-            "path": "/music/See You Again.mp3",
+            "name": "Paris",
+            "path": "/music/Paris - The Chainsmokers.mp3",
             "album": "/album_image/zhengfu200.png",
-            "singer":"Wiz Khalifa,Charlie Puth"
+            "singer":"The Chainsmokers"
+        },
+        {
+            "id": 9,
+            "name": "Something Just Like This",
+            "path": "/music/Something Just Like This - The Chainsmokers&Coldplay.mp3",
+            "album": "/album_image/zhengfu200.png",
+            "singer":"The Chainsmokers&Coldplay"
+        },
+        {
+            "id": 10,
+            "name": "Sunshine",
+            "path": "/music/Sunshine.mp3",
+            "album": "/album_image/zhengfu200.png",
+            "singer":"OneRepublic"
         }
     ]
 }
