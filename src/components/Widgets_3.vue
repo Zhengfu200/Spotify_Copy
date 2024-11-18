@@ -4,7 +4,6 @@ import {ref,toRefs,onMounted} from 'vue'
 import Play from 'vue-material-design-icons/Play.vue'
 import Pause from 'vue-material-design-icons/Pause.vue'
 import Heart from 'vue-material-design-icons/Heart.vue'
-
 //引入pinia
 import { useSongStore } from '../stores/song';
 import { storeToRefs } from 'pinia';

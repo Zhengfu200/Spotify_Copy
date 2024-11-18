@@ -12,7 +12,6 @@ const { singer_album, singer_name, singer_url} = toRefs(props)
 
 function open_singer_url() {
     window.open(singer_url.value, '_blank');  // 跳转到歌手的主页
- 
 }
 </script>
 
