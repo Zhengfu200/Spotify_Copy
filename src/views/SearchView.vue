@@ -21,7 +21,7 @@ import Widgets_2 from '@/components/Widgets_2.vue';
             <Widgets_2 category="播客排行榜"  image="https://t.scdn.co/images/7262179db37c498480ef06bfacb60310.jpeg  " catagory_url="https://open.spotify.com/genre/0JQ5DAB3zgCauRwnvdEQjJ"/>  
             <Widgets_2 category="Audiobooks"  image="https://i.scdn.co/image/ab67656300005f1fd464f18a416c86ede3a235a7  " catagory_url="https://open.spotify.com/genre/0JQ5DAqbMKFSi39LMRT0Cy"/>  
             <Widgets_2 category="排行榜"  image="https://i.scdn.co/image/ab67fb8200005caf14030380532b34badbf0a229  " catagory_url="https://open.spotify.com/genre/0JQ5DAqbMKFSi39LMRT0Cy"/>  
-            <Widgets_2 category="励志与回忆录"  image="https://avatars.akamai.steamstatic.com/cfd6459596ff59ff37f067100c96d092d40cfb07_full.jpg  " catagory_url="https://open.spotify.com/genre/0JQ5DAqbMKFSi39LMRT0Cy"/>      
+            <Widgets_2 category="锻炼"  image="https://i.scdn.co/image/ab67fb8200005caf6af6d83c78493644c9b0627b  " catagory_url="https://open.spotify.com/genre/0JQ5DAqbMKFAXlCG6QvYQ4"/>      
         </div>
     </div>
 </template>

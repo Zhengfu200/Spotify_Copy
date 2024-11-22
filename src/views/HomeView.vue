@@ -46,8 +46,8 @@ import hitokoto from '@/components/hitokoto.vue';
                 image="https://i.scdn.co/image/ab67616d00001e02e787cffec20aa2a396a61647"
                 title="Lover" author="Taylor Swift" jump_url="https://open.spotify.com/album/1NAmidJlEaVgA3MpcPFYGq"/>
             <Widgets_1 class="xl:block hidden"
-                image="https://avatars.akamai.steamstatic.com/cfd6459596ff59ff37f067100c96d092d40cfb07_full.jpg  "
-                title="征服204" author="互联网开发者zhengfu204" jump_url="https://zhengfu200.us.kg"/>
+                image="https://i.scdn.co/image/ab67616d00001e02741fd4807f442af3f7359316"
+                title="GOLDEN" author="Jung Kook" jump_url="https://open.spotify.com/album/5pSk3c3wVwnb2arb6ohCPU"/>
         </div>
     </div>
 
@@ -58,20 +58,20 @@ import hitokoto from '@/components/hitokoto.vue';
         <div class="py-1.5"></div>
         <div class="flex items-center">
             <Widgets_1
-                image="https://avatars.akamai.steamstatic.com/cfd6459596ff59ff37f067100c96d092d40cfb07_full.jpg  "
-                title="征服200" author="互联网开发者zhengfu200" />
+                image="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg"
+                title="全球热门歌曲" jump_url="https://open.spotify.com/playlist/37i9dQZEVXbNG2KDcFcKOF"/>
             <Widgets_1
-                image="https://avatars.akamai.steamstatic.com/cfd6459596ff59ff37f067100c96d092d40cfb07_full.jpg  "
-                title="征服201" author="互联网开发者zhengfu201" />
+                image="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_us_default.jpg"
+                title="美国热门歌曲" jump_url="https://open.spotify.com/playlist/37i9dQZEVXbLp5XoPON0wI" />
             <Widgets_1 class="md:block hidden"
-                image="https://avatars.akamai.steamstatic.com/cfd6459596ff59ff37f067100c96d092d40cfb07_full.jpg  "
-                title="征服202" author="互联网开发者zhengfu202" />
+                image="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_default.jpg"
+                title="全球前 50 名" jump_url="https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF" />
             <Widgets_1 class="lg:block hidden"
-                image="https://avatars.akamai.steamstatic.com/cfd6459596ff59ff37f067100c96d092d40cfb07_full.jpg  "
-                title="征服203" author="互联网开发者zhengfu203" />
+                image="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_us_default.jpg"
+                title="美国前 50 名" jump_url="https://open.spotify.com/playlist/37i9dQZEVXbLRQDuF5jeBp"/>
             <Widgets_1 class="xl:block hidden"
-                image="https://avatars.akamai.steamstatic.com/cfd6459596ff59ff37f067100c96d092d40cfb07_full.jpg  "
-                title="征服204" author="互联网开发者zhengfu204" />
+                image="https://charts-images.scdn.co/assets/locale_en/viral/daily/region_global_default.jpg"
+                title="全球飙升前 50 名" jump_url="https://open.spotify.com/playlist/37i9dQZEVXbLiRSasKsNU9" />
         </div>
     </div>
 </template>
