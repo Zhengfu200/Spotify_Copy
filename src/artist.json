@@ -6,7 +6,7 @@
         {
             "id": 1,
             "name": "See You Again",
-            "path": "/music/See You Again.mp3",
+            "path": "https://i.scdn.co/image/ab67616d0000b2734e5df11b17b2727da2b718d8",
             "album": "/album_image/See You Again.png",
             "singer":"Wiz Khalifa,Charlie Puth"
         },
@@ -21,56 +21,56 @@
             "id": 3,
             "name": "Blinding Lights",
             "path": "/music/Blinding Lights - The Weeknd.mp3",
-            "album": "/album_image/See You Again.png",
+            "album": "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36",
             "singer":"The Weeknd"
         },
         {
             "id": 4,
             "name": "Closer",
             "path": "/music/Closer - The Chainsmokers&Halsey.mp3",
-            "album": "/album_image/See You Again.png",
+            "album": "https://i.scdn.co/image/ab67616d00004851495ce6da9aeb159e94eaa453",
             "singer":"The Chainsmokers&Halsey"
         },
         {
             "id": 5,
             "name": "Counting Stars",
             "path": "/music/Counting Stars - OneRepublic.mp3",
-            "album": "/album_image/See You Again.png",
+            "album": "https://i.scdn.co/image/ab67616d000048519e2f95ae77cf436017ada9cb",
             "singer":"OneRepublic"
         },
         {
             "id": 6,
             "name": "Free Loop",
             "path": "/music/Free Loop - Daniel Powter.mp3",
-            "album": "/album_image/See You Again.png",
+            "album": "https://i.scdn.co/image/ab67616d00004851d5d74dc15f88ec6e02c7378d",
             "singer":"Daniel Powter"
         },
         {
             "id": 7,
             "name": "I Ain’t Worried",
             "path": "/music/I Ain’t Worried-OneRepublic.mp3",
-            "album": "/album_image/See You Again.png",
+            "album": "https://i.scdn.co/image/ab67616d00004851ec96e006b8bdfc582610ec13",
             "singer":"OneRepublic"
         },
         {
             "id": 8,
             "name": "Paris",
             "path": "/music/Paris - The Chainsmokers.mp3",
-            "album": "/album_image/zhengfu200.png",
+            "album": "https://i.scdn.co/image/ab67616d000048510c13d3d5a503c84fcc60ae94",
             "singer":"The Chainsmokers"
         },
         {
             "id": 9,
             "name": "Something Just Like This",
             "path": "/music/Something Just Like This - The Chainsmokers&Coldplay.mp3",
-            "album": "/album_image/zhengfu200.png",
+            "album": "https://i.scdn.co/image/ab67616d000048510c13d3d5a503c84fcc60ae94",
             "singer":"The Chainsmokers&Coldplay"
         },
         {
             "id": 10,
             "name": "Sunshine",
             "path": "/music/Sunshine.mp3",
-            "album": "/album_image/zhengfu200.png",
+            "album": "https://i.scdn.co/image/ab67616d000048513b248f42fb53c64faf1d748e",
             "singer":"OneRepublic"
         }
     ]
