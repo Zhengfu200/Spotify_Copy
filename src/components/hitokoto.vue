@@ -16,9 +16,9 @@ async function fetchApiData() {
         from.value = "来自" + response.data.from ;
         author.value = "来自" + response.data.from_who ;
         if(author.value !== null){
-            author_span = "————来自" +from.value+author.value
+            author_span.value = "————来自" +from.value+author.value
         }else{
-            author_span = "————来自" + from.value
+            author_span.value = "————来自" + from.value
         }
     } catch (error) {
         console.error('Error fetching API data:', error);
